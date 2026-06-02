@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import skullBg from '../images/background/skull.jpg'
-import logoImg from '../images/add img/logo.jpeg'
+import logoImg from '../images/add img/logo.png'
 import logotextImg from '../images/add img/logotext.jpeg'
 
 const links = [
@@ -31,19 +31,19 @@ export default function Navbar() {
   return (
     <>
       <header 
-        className="fixed top-0 z-[1000] h-[120px] w-full border-b border-white/5 bg-cover bg-center"
+        className="fixed top-0 z-[1000] h-[100px] w-full border-b border-white/5 bg-cover bg-center"
         style={{ backgroundImage: `linear-gradient(to bottom, rgba(5,5,5,0.4), rgba(5,5,5,0.8)), url(${skullBg})` }}
       >
-        <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between px-10">
+        <div className="flex h-full w-full items-center justify-between px-4">
           <a
             href="#home"
-            className="group flex items-center gap-4 transition-all"
+            className="group flex items-center gap-4 transition-all relative"
           >
-            <div className="flex h-[90px] w-[90px] items-center justify-center rounded-2xl bg-white/5 transition-all group-hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] group-hover:scale-105 overflow-hidden">
+            <div className="flex h-[188px] w-[188px] items-center justify-center transition-all group-hover:scale-105 overflow-hidden absolute left-0 top-1/2 -translate-y-1/2">
               <img src={logoImg} alt="SILVR BLACC" className="w-full h-full object-cover mix-blend-screen brightness-110 contrast-110" />
             </div>
-            <div className="h-[90px] flex items-center hidden sm:flex">
-              <img src={logotextImg} alt="SILVR BLACC" className="h-[65px] w-auto mix-blend-screen brightness-110 contrast-110" />
+            <div className="h-[100px] flex items-center hidden sm:flex ml-[200px]">
+              <img src={logotextImg} alt="SILVR BLACC" className="h-[78px] w-auto mix-blend-screen brightness-110 contrast-110" />
             </div>
           </a>
 
