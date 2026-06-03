@@ -180,7 +180,7 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
               variants={lineItem} 
               src={silvrTitle} 
               alt="SILVR BLACC PRODUCTIONS" 
-              className="w-full max-w-[900px] h-auto mix-blend-screen drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+              className="w-full max-w-[400px] sm:max-w-[600px] md:max-w-[900px] h-auto mix-blend-screen drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]"
             />
           </motion.div>
 
@@ -297,8 +297,8 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
         <div className="mx-auto max-w-[1320px] px-6 py-32 relative z-10">
           <div className="flex flex-wrap items-end justify-between gap-8">
             <div>
-              <img src={aiTitle} alt="CREATIVE AI HUB" className="max-w-[660px] h-auto mb-6 mix-blend-screen" />
-              <div className="max-w-[820px] font-sub text-[24px] italic text-purple-200/60 tracking-wider">
+              <img src={aiTitle} alt="CREATIVE AI HUB" className="max-w-full sm:max-w-[400px] md:max-w-[660px] h-auto mb-6 mix-blend-screen" />
+              <div className="max-w-[820px] font-sub text-[18px] sm:text-[24px] italic text-purple-200/60 tracking-wider">
                 Visuals that don&apos;t exist — until we make them.
               </div>
             </div>
@@ -328,8 +328,8 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
       {/* 5. MARKETING AGENCY */}
       <section id="marketing" className="creepy-bg-marketing relative border-t border-white/5 overflow-hidden">
         <div className="mx-auto max-w-[1320px] px-6 py-32 relative z-10">
-          <img src={marketingTitle} alt="MARKETING AGENCY" className="max-w-[900px] h-auto mb-2 mix-blend-screen" />
-          <div className="mt-2 font-mono text-[14px] uppercase tracking-[0.4em] text-green-400/60">
+          <img src={marketingTitle} alt="MARKETING AGENCY" className="max-w-full sm:max-w-[600px] md:max-w-[900px] h-auto mb-2 mix-blend-screen" />
+          <div className="mt-2 font-mono text-[12px] sm:text-[14px] uppercase tracking-[0.2em] sm:tracking-[0.4em] text-green-400/60">
             Twitter. Meta. YouTube. Instagram. Domination.
           </div>
 
@@ -357,8 +357,8 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
       {/* 6. POLITICAL CONSULTANCY */}
       <section id="political" className="creepy-bg-political relative border-t border-white/5 overflow-hidden">
         <div className="mx-auto max-w-[1320px] px-6 py-32 relative z-10">
-          <img src={politTitle} alt="POLITICAL CONSULTANCY" className="max-w-[900px] h-auto mb-6 mix-blend-screen" />
-          <div className="mt-6 max-w-[780px] font-sub text-[24px] italic text-red-400/60 tracking-wider">
+          <img src={politTitle} alt="POLITICAL CONSULTANCY" className="max-w-full sm:max-w-[600px] md:max-w-[900px] h-auto mb-6 mix-blend-screen" />
+          <div className="mt-6 max-w-[780px] font-sub text-[18px] sm:text-[24px] italic text-red-400/60 tracking-wider">
             We turn strategy into power.
           </div>
 
@@ -386,8 +386,8 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
       {/* 7. PRODUCTION & DISTRIBUTION */}
       <section id="production" className="creepy-bg-production relative border-t border-white/5">
         <div className="mx-auto max-w-[1320px] px-6 py-32 relative z-10">
-          <img src={prodTitle} alt="Music/Video Production and Distribution" className="max-w-[900px] h-auto mb-6 mix-blend-screen" />
-          <div className="mt-8 font-sub text-[24px] italic text-white/40 tracking-widest uppercase">
+          <img src={prodTitle} alt="Music/Video Production and Distribution" className="max-w-full sm:max-w-[600px] md:max-w-[900px] h-auto mb-6 mix-blend-screen" />
+          <div className="mt-8 font-sub text-[18px] sm:text-[24px] italic text-white/40 tracking-widest uppercase">
             Where Raw Talent Meets Elite Execution.
           </div>
 
@@ -449,8 +449,8 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
       {/* 8. IT CONSULTANCY */}
       <section id="it-consultancy" className="creepy-bg-it relative border-t border-white/5 overflow-hidden">
         <div className="mx-auto max-w-[1320px] px-6 py-32 relative z-10">
-          <img src={itTitle} alt="IT CONSULTANCY" className="max-w-[660px] h-auto mb-6 mix-blend-screen" />
-          <div className="mt-6 font-mono text-[15px] uppercase tracking-[0.4em] text-blue-400/60">
+          <img src={itTitle} alt="IT CONSULTANCY" className="max-w-full sm:max-w-[400px] md:max-w-[660px] h-auto mb-6 mix-blend-screen" />
+          <div className="mt-6 font-mono text-[12px] sm:text-[15px] uppercase tracking-[0.2em] sm:tracking-[0.4em] text-blue-400/60">
             Engineering Tomorrow&apos;s Solutions Today.
           </div>
 
@@ -478,11 +478,11 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
       {/* 9. THE STORE */}
       <section id="store" className="creepy-bg-store relative border-t border-white/5 min-h-[80vh] flex items-center">
         <div className="mx-auto max-w-[1320px] px-6 py-32 text-center w-full relative z-10">
-          <img src={storeTitle} alt="SILVR BLACC STORE" className="mx-auto max-w-[780px] h-auto mb-6" />
-          <div className="mt-12 text-[52px] text-white/20 tracking-[0.2em] font-sub">
+          <img src={storeTitle} alt="SILVR BLACC STORE" className="mx-auto max-w-full sm:max-w-[500px] md:max-w-[780px] h-auto mb-6" />
+          <div className="mt-12 text-[32px] sm:text-[52px] text-white/20 tracking-[0.2em] font-sub">
             COMING SOON.
           </div>
-          <div className="mx-auto mt-10 max-w-[720px] font-body text-[26px] italic text-white/50 leading-relaxed tracking-wide">
+          <div className="mx-auto mt-10 max-w-[720px] font-body text-[18px] sm:text-[26px] italic text-white/50 leading-relaxed tracking-wide">
             The SILVR BLACC Store is coming soon. Beyond the world, we are going to sell creative handmade artworks and clothing, exclusive digital products, masterclasses, and courses.
           </div>
           <div className="mt-16 flex justify-center">
@@ -499,14 +499,14 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
           <div className="grid grid-cols-1 gap-16 md:grid-cols-[0.4fr_0.6fr] items-stretch">
             <div className="flex flex-col">
               <div className="mb-0">
-                <div className="text-[72px] leading-[0.85] chrome-silver">
+                <div className="text-[42px] sm:text-[72px] leading-[0.85] chrome-silver">
                   LET&apos;S BUILD TOGETHER.
                 </div>
-                <div className="mt-8 font-body text-[24px] italic text-white/50 leading-relaxed">
+                <div className="mt-8 font-body text-[18px] sm:text-[24px] italic text-white/50 leading-relaxed">
                   Ready to architect your dominance? Get in touch with our team today.
                 </div>
                 <div className="mt-4">
-                  <img src={crowImg} alt="SILVR BLACC Crow" className="w-[640px] h-auto opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700 mix-blend-screen" />
+                  <img src={crowImg} alt="SILVR BLACC Crow" className="w-full max-w-[640px] h-auto opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700 mix-blend-screen" />
                 </div>
               </div>
               
