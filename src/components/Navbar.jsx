@@ -52,13 +52,13 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className={`flex items-center gap-3 transition-all duration-300 font-nav nav-link-gold group/link ${
+                className={`flex items-center gap-3 transition-all duration-300 font-nav nav-link-silver group/link ${
                   active === l.href
-                    ? 'bg-white/10 shadow-[0_0_20px_rgba(255,255,255,0.1)] border-white/40'
+                    ? 'bg-white/10 shadow-[0_0_20px_rgba(255,255,255,0.15)] border-white/60'
                     : 'opacity-70 hover:opacity-100'
                 }`}
               >
-                <l.icon className="h-5 w-5 text-[#d4af37] transition-all group-hover/link:scale-110 group-hover/link:drop-shadow-[0_0_8px_rgba(212,175,55,0.8)]" />
+                <l.icon className="h-5 w-5 text-white transition-all group-hover/link:scale-110 group-hover/link:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
                 <span>{l.label}</span>
               </a>
             ))}
@@ -105,8 +105,8 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className="group flex items-center gap-6 font-display text-[32px] leading-none tracking-[0.08em] text-white/80 hover:text-white transition-all"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-[#d4af37]/50 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all">
-                    <l.icon className="h-6 w-6 text-[#d4af37] group-hover:scale-110 transition-all" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-white/50 group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all">
+                    <l.icon className="h-6 w-6 text-white group-hover:scale-110 transition-all" />
                   </div>
                   {l.label}
                 </a>

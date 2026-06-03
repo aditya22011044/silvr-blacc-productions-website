@@ -105,18 +105,27 @@ export default function Home() {
 
   const onContactSubmit = (e) => {
     e.preventDefault()
-    const subject = `SILVR BLACC — New Inquiry (${contact.service})`
-    const body = [
-      `Name: ${contact.name}`,
-      `Email: ${contact.email}`,
-      `Phone: ${contact.phone}`,
-      `Company: ${contact.company}`,
-      `Service: ${contact.service}`,
-      '',
-      contact.message,
-    ].join('\n')
+    // subject "service (selected) enquiry - name surname"
+    const subject = `service (${contact.service}) enquiry - ${contact.name}`
+    
+    // Perfect format with name and all
+    const body = `
+MISSION BRIEF DETAILS
+---------------------
+Name: ${contact.name}
+Email: ${contact.email}
+Phone: ${contact.phone || 'N/A'}
+Company: ${contact.company || 'N/A'}
+Service Interested: ${contact.service}
 
-    window.location.href = `mailto:hello@silvrblacc.com?subject=${encodeURIComponent(
+MISSION STATEMENT:
+${contact.message}
+
+---------------------
+Sent from SILVR BLACC PRODUCTIONS Terminal
+    `.trim()
+
+    window.location.href = `mailto:adityaatole2k02@gmail.com?subject=${encodeURIComponent(
       subject,
     )}&body=${encodeURIComponent(body)}`
     setContactSent(true)
@@ -470,7 +479,7 @@ export default function Home() {
               <div className="mt-4 space-y-12">
                 <div>
                   <div className="font-mono text-[10px] uppercase tracking-[0.4em] text-white/30">EMAIL US</div>
-                  <div className="mt-4 text-[32px] leading-none text-white/80 hover:chrome-silver transition-all cursor-pointer">hello@silvrblacc.com</div>
+                  <div className="mt-4 text-[32px] leading-none text-white/80 hover:chrome-silver transition-all cursor-pointer">adityaatole2k02@gmail.com</div>
                 </div>
                 <div>
                   <div className="font-mono text-[10px] uppercase tracking-[0.4em] text-white/30">FOLLOW US</div>
