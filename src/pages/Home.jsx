@@ -96,20 +96,28 @@ export default function Home() {
     service: 'AI Creative Content',
     message: '',
   })
-  const [contactSent, setContactSent] = useState(false)
+  const [contactStatus, setContactStatus] = useState('idle') // idle, sending, success, error
 
   const onContactChange = (key) => (e) => {
-    setContactSent(false)
+    setContactStatus('idle')
     setContact((prev) => ({ ...prev, [key]: e.target.value }))
   }
 
-  const onContactSubmit = (e) => {
+  const onContactSubmit = async (e) => {
     e.preventDefault()
-    // subject "service (selected) enquiry - name surname"
-    const subject = `service (${contact.service}) enquiry - ${contact.name}`
-    
-    // Perfect format with name and all
-    const body = `
+    setContactStatus('sending')
+
+    // Web3Forms configuration
+    // To make this work: Get your Access Key from https://web3forms.com/ (It's free)
+    const accessKey = 'YOUR_WEB3FORMS_ACCESS_KEY_HERE' 
+
+    const formData = {
+      access_key: accessKey,
+      name: contact.name,
+      email: contact.email,
+      subject: `service (${contact.service}) enquiry - ${contact.name}`,
+      from_name: 'SILVR BLACC PRODUCTIONS',
+      message: `
 MISSION BRIEF DETAILS
 ---------------------
 Name: ${contact.name}
@@ -123,12 +131,38 @@ ${contact.message}
 
 ---------------------
 Sent from SILVR BLACC PRODUCTIONS Terminal
-    `.trim()
+      `.trim(),
+    }
 
-    window.location.href = `mailto:adityaatole2k02@gmail.com?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`
-    setContactSent(true)
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setContactStatus('success')
+        setContact({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: 'AI Creative Content',
+          message: '',
+        })
+      } else {
+        setContactStatus('error')
+      }
+    } catch (error) {
+      console.error('Submission error:', error)
+      setContactStatus('error')
+    }
   }
 
   return (
@@ -519,14 +553,25 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
                     />
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <label className="operator-label">Company or Organization</label>
-                  <input
-                    placeholder="Company or Organization"
-                    value={contact.company}
-                    onChange={onContactChange('company')}
-                    className="operator-input"
-                  />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <label className="operator-label">Company or Organization</label>
+                    <input
+                      placeholder="Company or Organization"
+                      value={contact.company}
+                      onChange={onContactChange('company')}
+                      className="operator-input"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="operator-label">Phone Number</label>
+                    <input
+                      placeholder="+1 (555) 000-0000"
+                      value={contact.phone}
+                      onChange={onContactChange('phone')}
+                      className="operator-input"
+                    />
+                  </div>
                 </div>
                 <div className="space-y-2">
                   <label className="operator-label">Select a Service</label>
@@ -555,10 +600,16 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
                 </div>
                 <button
                   type="submit"
-                  className="w-full operator-btn flex items-center justify-center gap-4 group"
+                  disabled={contactStatus === 'sending'}
+                  className={`w-full operator-btn flex items-center justify-center gap-4 group ${
+                    contactStatus === 'sending' ? 'opacity-50 cursor-not-allowed' : ''
+                  }`}
                 >
                   <span className="group-hover:text-white transition-colors duration-300">
-                    {contactSent ? 'MISSION BRIEF TRANSMITTED' : 'SEND MISSION BRIEF'}
+                    {contactStatus === 'idle' && 'SEND MISSION BRIEF'}
+                    {contactStatus === 'sending' && 'TRANSMITTING...'}
+                    {contactStatus === 'success' && 'MISSION BRIEF TRANSMITTED'}
+                    {contactStatus === 'error' && 'TRANSMISSION FAILED - TRY AGAIN'}
                   </span>
                 </button>
                 <div className="text-center">
