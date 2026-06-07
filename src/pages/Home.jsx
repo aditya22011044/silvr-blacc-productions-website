@@ -280,7 +280,7 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
       <section id="services" className="creepy-bg-pillars relative border-t border-white/5">
         <div className="mx-auto max-w-[1320px] px-6 py-32 relative z-10">
           <div className="text-center">
-            <img src={sixImg} alt="THE SIX PILLARS" className="mx-auto max-w-[750px] h-auto mb-2 mix-blend-screen" />
+            <img src={sixImg} alt="THE SIX PILLARS" className="mx-auto w-full max-w-[300px] sm:max-w-[500px] md:max-w-[750px] h-auto mb-2 mix-blend-screen" />
             <div className="mx-auto mt-2 h-[1px] w-[160px] bg-white/10" />
             <div className="mx-auto mt-6 max-w-[820px] font-body text-[22px] text-white/60 italic tracking-wide">
               Six core disciplines. <span className="text-green-400">One unified vision</span> of <span className="text-red-600">dominance.</span>
