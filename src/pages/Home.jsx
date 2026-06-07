@@ -109,7 +109,7 @@ export default function Home() {
 
     // Web3Forms configuration
     // To make this work: Get your Access Key from https://web3forms.com/ (It's free)
-    const accessKey = '5e14aaad-ac5b-4642-9614-20f14012d9f5' 
+     const accessKey = '5d51f56e-9499-4b6c-82f2-adc50d17df01' 
 
     const formData = {
       access_key: accessKey,
