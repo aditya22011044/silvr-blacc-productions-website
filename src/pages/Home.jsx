@@ -513,7 +513,7 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
               <div className="mt-4 space-y-12">
                 <div>
                   <div className="font-mono text-[10px] uppercase tracking-[0.4em] text-white/30">EMAIL US</div>
-                  <div className="mt-4 text-[32px] leading-none text-white/80 hover:chrome-silver transition-all cursor-pointer">adityaatole2k02@gmail.com</div>
+                  <div className="mt-4 text-[32px] leading-none text-white/80 hover:chrome-silver transition-all cursor-pointer">business@silvrblacc.com</div>
                 </div>
                 <div>
                   <div className="font-mono text-[10px] uppercase tracking-[0.4em] text-white/30">FOLLOW US</div>
