@@ -134,6 +134,12 @@ Sent from SILVR BLACC PRODUCTIONS Terminal
       `.trim(),
     }
 
+    // Explicitly add a notification email if the Web3Forms key is tied to another address
+    // Note: Web3Forms usually sends to the email used to create the Access Key.
+    // If you want to change the destination, you usually update it in the Web3Forms Dashboard.
+    // However, we can try adding the 'to' parameter if your plan supports it.
+    formData.to = 'business@silvrblacc.com';
+
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
